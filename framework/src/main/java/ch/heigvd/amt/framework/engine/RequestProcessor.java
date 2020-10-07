@@ -18,6 +18,7 @@ class RequestProcessor {
 
     // TODO: Not a big fan of using a switch statement, which is going to grow large as we add commands...
     switch (request.getServiceName()) {
+
       case "healthCheckService": // this is a "framework" service, so kind of OK
         response.setStatusCode(0);
         switch (request.getOperationName()) {
@@ -29,10 +30,12 @@ class RequestProcessor {
             break;
         }
         break;
+
       case "clockService": // is this a "framework" or "application" service...
         response.setStatusCode(0);
         response.setValue("2019-01-01");
         break;
+
       case "calculatorService": // TODO: this is definitely an "application" service and needs to be extracted!!
         response.setStatusCode(0);
         switch (request.getOperationName()) {

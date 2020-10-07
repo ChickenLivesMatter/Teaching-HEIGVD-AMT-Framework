@@ -28,8 +28,10 @@ public class Server {
   private RequestProcessor requestProcessor = new RequestProcessor();
 
   private static Server singleton = new Server();
+
   private Server() {
   }
+
   public static Server getServer() {
     return singleton;
   }
@@ -62,8 +64,10 @@ public class Server {
   }
 
   private void handleClient(Socket socket) throws IOException {
+
     BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
     BufferedWriter out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(), "UTF-8"));
+
     String line = in.readLine();
     while (line != null) {
       try {

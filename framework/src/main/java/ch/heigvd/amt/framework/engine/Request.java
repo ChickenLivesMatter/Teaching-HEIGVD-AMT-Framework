@@ -10,7 +10,9 @@ import java.util.List;
 class Request {
 
   private String serviceName;
+
   private String operationName;
+
   private List<String> parameterValues = new ArrayList<>();
 
   /**
@@ -28,7 +30,9 @@ class Request {
       }
 
       serviceName = elements[0];
+
       operationName = elements[1];
+
       for (int i = 2; i < elements.length; i++) {
         parameterValues.add(elements[i]);
       }
