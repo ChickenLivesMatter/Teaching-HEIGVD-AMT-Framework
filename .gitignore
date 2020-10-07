@@ -1,3 +1,6 @@
+mvn-repo/
+*.iml
+
 .idea/
 target/
 pom.xml.tag
